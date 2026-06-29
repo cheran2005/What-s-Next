@@ -1,0 +1,14 @@
+
+.Main{
+  display:flex;
+  justify-content : center;
+  border: 0.1rem;
+  border:2px solid green;  
+}
+
+.logo {
+  
+  border:2px solid white;  
+  width: 25rem;
+  height: 6rem;
+}
