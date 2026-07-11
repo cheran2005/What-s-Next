@@ -2,7 +2,8 @@
 .Main{
   display:flex;
   justify-content : center;
-  padding:0.2rem;
+  overflow-y: auto;   
+  overflow-x: hidden; 
 }
 
 .Middle-Grid{
@@ -10,6 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index : 1;
 }
 
 @media (min-width: 1000px) {
@@ -32,13 +34,16 @@
   width: 100%;
 }
 
-.SearchTask{
+.InputStyle{
   background-color: #1f1e1e;
   color: #ffffff;
   border: 0.05rem solid rgb(78, 76, 76);
   padding-left: 0.5rem;
-  width: 17rem;
 
+}
+
+.InputStyle.SearchTask{
+  width: 17rem;
 }
 .SearchTask::placeholder{
   color:white
@@ -52,43 +57,8 @@
   gap:1rem;
 }
 
-.Column-Section{
-  margin: 1rem 0 1rem 0;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  color : white;
-  border-collapse: collapse;
-  width:100%;
-}
 
-.columnTitle{
-  border: 0.05rem solid rgb(255, 255, 255);
-  background-color: #292727;
-  padding-left:0.5rem;
-  padding-right: 1.5rem;
-}
-
-.TaskRows{
-  display:flex;
-  flex-direction: column;
-  width : 100%;
-  margin :0 0 1rem 0;
-  padding:0;
-}
-
-.Column-Section.Row-Section {
-  margin :0;
-  padding: 0 0;
-}
-
-.columnTitle.Row-Title{
-  margin:0;
-  background-color: #000000;
-}
-
-
-
-/*Buttons*/
+/*Buttons & Icons*/
 .ButtonStyle {
   background-color: #1f1e1e;
   border-radius: 0.3rem;
@@ -110,14 +80,12 @@
   transform: translateY(-0.25rem);
 }
 
-
-
-/*FONTs */
-
+/*Fonts */
 .alumni-sans-regular{
   font-family: "Alumni Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size : 1.6rem;
+  color:white;
 }

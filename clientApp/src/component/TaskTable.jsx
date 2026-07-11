@@ -1,4 +1,4 @@
-import '../app.css';
+import './TaskTable.css';
 
 function TaskTable() {
     const columnTitles = ["Task","Due Date", "Category", "Status"]
