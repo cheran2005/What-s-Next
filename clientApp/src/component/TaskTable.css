@@ -16,15 +16,25 @@
   padding:0;
 }
 
+.Column-Section.Row-Section:hover{
+  border-width: 0.1rem;
+  background-color: #292727;
+  transform: translateY(-0.25rem);
+  border: 0.01rem solid rgb(255, 255, 255);
+}
+
 .columnTitle{
   border: 0.05rem solid rgb(255, 255, 255);
   background-color: #292727;
   padding-left:0.5rem;
 }
 
-.Column-Section.Row-Section {
+.Column-Section.Row-Section{
+  border: 0rem solid rgb(255, 255, 255);
   margin :0;
   padding: 0 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-width 0.2s ease;
 }
 
 .columnTitle.Row-Title{

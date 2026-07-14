@@ -1,7 +1,13 @@
 import './TaskTable.css';
-
-function TaskTable() {
+import { useState } from 'react';
+function TaskTable(prop) {
     const columnTitles = ["Task","Due Date", "Category", "Status"]
+    const [getTask, setTask] = useState("");
+    const [openTaskScreen, setTaskScreen] = useState(false);
+
+    const  handleRowClick = (task) =>{
+        prop.openTaskScreen();
+    }
 
     var tasks = [
         {id : 1, Task : 'Basketball',DueDate : '2026/07/04',Category : "Sports" , Status : 'Completed'},
@@ -17,7 +23,7 @@ function TaskTable() {
 
             <div className = "TaskRows">
                 {tasks.map((task) =>(
-                    <div className = "Column-Section Row-Section alumni-sans-regular"  key = {task.id}>
+                    <div key = {task.id} onClick = {() => handleRowClick(task)} className = "Column-Section Row-Section alumni-sans-regular"  key = {task.id}>
                         <p className ="columnTitle Row-Title" >{task.Task}</p>
                         <p className ="columnTitle Row-Title">{task.DueDate}</p>
                         <p className ="columnTitle Row-Title">{task.Category}</p>
