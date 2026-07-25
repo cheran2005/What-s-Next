@@ -1,6 +1,6 @@
 # What's Next
 
-Project URL: whats-next-2udf2svqx-cheran2005s-projects.vercel.app
+Project URL: https://whats-next-zeta.vercel.app/
 
 A browser-based task management application built with React, Vite, and IndexedDB.
 
