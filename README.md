@@ -1,5 +1,7 @@
 # What's Next
 
+Project URL: whats-next-2udf2svqx-cheran2005s-projects.vercel.app
+
 A browser-based task management application built with React, Vite, and IndexedDB.
 
 Users can create, edit, delete, search, and organize tasks. Task data is stored locally in the browser using IndexedDB, so tasks remain available after the page is refreshed.
