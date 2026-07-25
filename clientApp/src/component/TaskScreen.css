@@ -19,17 +19,21 @@
 
 .TaskBox{
   position: relative;
-  width: 80%;
-  height: 30rem;
+  width: 35rem;
+  height: 35rem;
   background-color: #000000;
   border: 0.05rem solid rgb(255, 255, 255);
 }
-
-@media (min-width: 1000px) {
-  .TaskBox {
-    width: 60%;
-    height: 70vh;
-  }
+.TaskBoxDeletePopUp{
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 23rem;
+  height: 18rem;
+  background-color: #000000;
+  border: 0.05rem solid rgb(255, 255, 255);
 }
 
 .TaskBoxSectionContainer{
@@ -97,6 +101,17 @@
   color:white;
 }
 
+.InProgressText{
+  color:rgb(231, 109, 28);
+}
+
+.InCompletedText{
+  color:rgb(214, 7, 7);
+}
+
+.CompletedText{
+  color:rgb(9, 255, 0);
+}
 
 /*Exit button*/  
 .ExitIcon{
@@ -118,7 +133,6 @@
 /*Submit Button*/
 .SubmitContainer{
   margin:3rem;
-   
 }
 .SubmitButton{
   width: 15rem;

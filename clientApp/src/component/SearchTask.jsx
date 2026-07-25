@@ -1,6 +1,6 @@
 import './SearchTask.css';
 
-function SearchTask() {
+function SearchTask(props) {
 
     return(
         <>
@@ -8,6 +8,8 @@ function SearchTask() {
                 className = " alumni-sans-regular InputStyle SearchTask"
                 type="text"
                 placeholder="Search Task..."
+                value={props.inputValue}
+                onChange={props.inputOnChange}
             />
         </>
     )

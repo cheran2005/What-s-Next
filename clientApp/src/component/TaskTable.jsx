@@ -1,35 +1,40 @@
 import './TaskTable.css';
 import { useState } from 'react';
+import { TiDeleteOutline } from "react-icons/ti";
 function TaskTable(prop) {
     const columnTitles = ["Task","Due Date", "Category", "Status"]
-    const [getTask, setTask] = useState("");
     const [openTaskScreen, setTaskScreen] = useState(false);
+    const [tasks, setTasks] = useState([]);
 
-    const  handleRowClick = (task) =>{
-        prop.openTaskScreen();
-    }
-
-    var tasks = [
-        {id : 1, Task : 'Basketball',DueDate : '2026/07/04',Category : "Sports" , Status : 'Completed'},
-        {id : 2, Task : 'Basketball',DueDate : '2026/07/04',Category : "Sports" , Status : 'Completed'}
-    ]
     return(
         <>
-           <div className = "Column-Section alumni-sans-regular">
+           <div className = "Column-Section TableHeader alumni-sans-regular">
                 {columnTitles.map((title,i) =>(
                     <p className ="columnTitle" key = {i}>{title}</p>
                 ))}
            </div> 
 
             <div className = "TaskRows">
-                {tasks.map((task) =>(
-                    <div key = {task.id} onClick = {() => handleRowClick(task)} className = "Column-Section Row-Section alumni-sans-regular"  key = {task.id}>
-                        <p className ="columnTitle Row-Title" >{task.Task}</p>
-                        <p className ="columnTitle Row-Title">{task.DueDate}</p>
-                        <p className ="columnTitle Row-Title">{task.Category}</p>
-                        <p className ="columnTitle Row-Title">{task.Status}</p>
-                    </div>
-                ))}
+
+                
+                    {(prop.Tasks || []).map((task) =>(
+                        <div key = {task.id} className = "TaskRowContainer">
+
+                            <div onClick = {() => prop.handleRowClick(task.id)} className = "Column-Section Row-Section alumni-sans-regular"  key = {task.id}>
+                                <p className ="columnTitle Row-Title" >{task.taskTitle}</p>
+                                <p className ="columnTitle Row-Title">{task.dueDate}</p>
+                                <p className ="columnTitle Row-Title">{task.category}</p>
+                                <p className ={`columnTitle Row-Title ${task.status === "Complete" ? "CompletedText" 
+                                    : task.status === "In Progress" ? "InProgressText" :task.status === "Not Started" ? "InCompletedText" :"alumni-sans-regular"
+                                }`}>{task.status}</p>
+
+                                
+                                
+                            </div>
+                        </div>
+                    ))}
+
+                    
            </div> 
         </>
     )

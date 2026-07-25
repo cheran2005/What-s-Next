@@ -7,11 +7,11 @@ function TaskInput(props) {
                     {props.title}
                 </p>
                 <input                 
-                        type={props.inputType}
+                        type={props.inputType || "text"}
                         value={props.inputValue}
                         onChange={props.inputOnChange}
-                        placeholder={props.inputPlaceholder}
-                        className={props.inputClassName}
+                        placeholder={props.inputPlaceholder || ""}
+                        className={props.inputClassName || ""}
                 />
             </div>
     </>

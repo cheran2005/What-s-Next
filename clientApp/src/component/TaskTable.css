@@ -1,7 +1,7 @@
 
 
 .Column-Section{
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0 0 0;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   border-collapse: collapse;
@@ -12,8 +12,10 @@
   display:flex;
   flex-direction: column;
   width : 100%;
-  margin :0 0 1rem 0;
-  padding:0;
+}
+.TaskRowContainer{
+  display:flex;
+  
 }
 
 .Column-Section.Row-Section:hover{
@@ -32,7 +34,6 @@
 .Column-Section.Row-Section{
   border: 0rem solid rgb(255, 255, 255);
   margin :0;
-  padding: 0 0;
   cursor: pointer;
   transition: transform 0.2s ease, border-width 0.2s ease;
 }
@@ -43,8 +44,6 @@
 }
 
 
-
-
 /*Fonts */
 .alumni-sans-regular{
   font-family: "Alumni Sans", sans-serif;
@@ -53,4 +52,16 @@
   font-style: normal;
   font-size : 1.6rem;
   color:white;
+}
+
+.InProgressText{
+  color:rgb(231, 109, 28);
+}
+
+.InCompletedText{
+  color:rgb(214, 7, 7);
+}
+
+.CompletedText{
+  color:rgb(9, 255, 0);
 }
